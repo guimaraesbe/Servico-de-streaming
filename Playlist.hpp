@@ -1,3 +1,6 @@
+#ifndef PLAYLIST_HPP
+#define PLAYLIST_HPP
+
 #include <iostream>
 #include <vector>
 #include<memory>
@@ -9,8 +12,10 @@ class Playlist {
     std::vector<std::shared_ptr<Midia>> _faixas;
 
     public:
+    Playlist() = default; 
     Playlist(std::string nome);
     void add(std::shared_ptr<Midia> faixa);
     void list() const;
     void play_all() const;
 };
+#endif
